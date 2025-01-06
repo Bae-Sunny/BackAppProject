@@ -9,3 +9,5 @@ BackAppProject
 <img width="612" alt="스크린샷 2024-12-31 오전 1 09 28" src="https://github.com/user-attachments/assets/4bced7d2-bba7-474d-a11d-0402537fa412" />
 <img width="612" alt="스크린샷 2024-12-31 오전 1 09 45" src="https://github.com/user-attachments/assets/a9a1bcd1-7b01-4f0b-b86b-c557874e1794" />
 
+# App Sketch (2025.01.07)
+![2025-01-071 51 55-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/17ed6143-b006-467d-afad-86e445101e12)
