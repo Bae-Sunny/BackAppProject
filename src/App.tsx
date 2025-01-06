@@ -12,19 +12,22 @@ import { Pages } from './types/types';
 const App = () => {
     const [currentPage, setCurrentPage] = useState<Pages>('home');
 
+    const renderPage = (page: Pages) => {
+        return <div className="page-container">{pages[page]}</div>;
+    };
+
     const pages = {
         home: <HomePage />,
         analysis: <AnalysisPage />,
         list: <ListPage />,
         profile: <ProfilePage />,
         transaction: <TransactionPage />,
-
     };
 
     return (
         <div className="h-screen flex flex-col bg-gray-50">
             <Header />
-            <main className="flex-1 overflow-y-auto">{pages[currentPage]}</main>
+            <main className="flex-1">{renderPage(currentPage)}</main>
             <BottomNavigation currentPage={currentPage} setCurrentPage={setCurrentPage} />
         </div>
     );
