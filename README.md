@@ -51,8 +51,7 @@ BackAppProject는 [뱅크어플프로젝트].
     <tr>
       <td><img width="300" alt="Sketch 1" src="https://github.com/user-attachments/assets/06b0dc9d-ea6b-4b0d-ab22-973242a29b3e" /></td>
       <td><img width="300" alt="Sketch 2" src="https://github.com/user-attachments/assets/90516a2f-73db-42fc-ba1e-0b04c077cf67"/></td>
-
-    </tr>
+</tr>
   </table>
 </div>
 분석 탭 캘린더 모달 수정 예정
