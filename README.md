@@ -8,7 +8,7 @@ BackAppProject는 [뱅크어플프로젝트].
 ## App Sketch (2024.12.31)
 
 ### 디자인 스케치
-아래는 2024년 12월 31일 기준의 앱 스케치입니다.
+회의 노트 기준 단순 앱 스케치
 
 <div align="center">
   <table>
@@ -25,7 +25,7 @@ BackAppProject는 [뱅크어플프로젝트].
 
 ## App Sketch (2025.01.07)
 
-### 최신 스케치 링크
+### 앱 기능 1차 수정
 [2025년 1월 7일 스케치 보기](https://github.com/user-attachments/assets/01eefcc4-b90e-4f91-ad55-769b877526b2)
 
 <div align="center">
@@ -58,6 +58,28 @@ BackAppProject는 [뱅크어플프로젝트].
 
 ---
 
-### 추가 설명
-- 유저 친화적 UX/UI 개선
-- 모달 활성화
+## App Sketch (2025.01.07) 
+### 2차 수정 (앱 기능별 분리 및 디자인 재구성)
+https://github.com/user-attachments/assets/be4f4f6f-7b71-4dc7-b577-31e117a41707
+<div align="center">
+  <table>
+    <tr>
+      <td><img width="300" alt="Sketch 1" src="https://github.com/user-attachments/assets/2a3eb3fd-8302-4a1c-8701-9038e0498fca" /></td>
+      <td><img width="300" alt="Sketch 2" src="https://github.com/user-attachments/assets/76cc67b7-5b5e-4465-856b-fa3d63f320ab" /></td>
+      <td><img width="300" alt="Sketch 3" src="https://github.com/user-attachments/assets/74ba8bd7-3aeb-48c3-b7dc-f13ebd8b7dab" /></td>
+      <td><img width="300" alt="Sketch 4" src="https://github.com/user-attachments/assets/53061441-977b-4a54-9dc5-7bfca5bed44c" /></td>
+    </tr>
+    <tr>
+      <td><img width="300" alt="Sketch 1" src="https://github.com/user-attachments/assets/73d2e4df-0474-47f5-ac98-aeaaf111039c" /></td>
+      <td><img width="300" alt="Sketch 2" src="https://github.com/user-attachments/assets/f58a677b-e83d-4d00-a208-5a968f45346e" /></td>
+      <td><img width="300" alt="Sketch 3" src="https://github.com/user-attachments/assets/49b1e948-4653-4691-b51a-1e4a19343637" /></td>
+      <td><img width="300" alt="Sketch 4" src="https://github.com/user-attachments/assets/f07b2451-2b69-47c9-96ea-2cc99c1ee291" /></td>
+    </tr>
+    <tr>
+      <td><img width="300" alt="Sketch 1" src="https://github.com/user-attachments/assets/26deb0af-0ef7-4e19-88d2-493b6009d4bd" /></td>
+      <td><img width="300" alt="Sketch 2" src="https://github.com/user-attachments/assets/e4e7eed8-4b6f-4505-a9c6-7b9764002eea" /></td>
+      <td><img width="300" alt="Sketch 3" src="https://github.com/user-attachments/assets/5ad76469-af99-4459-9799-0d27a064f7d0" /></td>
+      <td></td>
+    </tr>
+  </table>
+</div>
