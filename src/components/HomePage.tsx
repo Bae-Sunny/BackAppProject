@@ -159,7 +159,7 @@ const HomePage = () => {
     };
 
     return (
-        <div className="page-container">
+        <div className="page-container bg-gray-100 min-h-screen">
             <div className="space-y-6 p-4 max-w-4xl mx-auto">
                 <div className="bg-white rounded-lg shadow-lg overflow-hidden">
                     {/* 목표 카드 헤더 */}
@@ -174,7 +174,7 @@ const HomePage = () => {
                                 className="p-2 hover:bg-gray-100 rounded-full transition-colors"
                                 title="목표 설정 수정하기"
                             >
-                                <Settings className="w-5 h-5 text-gray-600" />
+                                <Settings className="w-6 h-6 text-blue-600" />
                             </button>
                         </div>
                     </div>

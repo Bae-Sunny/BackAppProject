@@ -15,7 +15,7 @@ interface FinancialProduct {
     category: 'deposit' | 'savings' | 'investment';
 }
 
-const ListPage = () => {
+const GiftPage = () => {
     const [products, setProducts] = useState<FinancialProduct[]>([
         {
             id: 1,
@@ -126,13 +126,13 @@ const ListPage = () => {
     };
 
     return (
-        <div className="page-container">
+        <div className="page-container bg-gray-100 min-h-screen">
             <div className="space-y-6 p-4 max-w-4xl mx-auto">
                 <div className="bg-white rounded-lg shadow-lg overflow-hidden">
                     {/* 페이지 헤더 */}
-                    <div className="px-6 py-4 border-b bg-gray-50">
+                    <div className="px-6 py-4 border-b">
                         <div className="flex justify-between items-center">
-                            <h2 className="text-xl font-bold">금융상품 마켓</h2>
+                            <h2 className="text-xl font-bold">금융 상품 추천</h2>
                             <Gift className="w-6 h-6 text-blue-600" />
                         </div>
                     </div>
@@ -272,4 +272,4 @@ const ListPage = () => {
     );
 };
 
-export default ListPage;
+export default GiftPage;

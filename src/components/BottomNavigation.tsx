@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Home, List, User, CreditCard, Activity } from 'lucide-react';
+import { Home, List, User, CreditCard, ArrowRightLeft, Activity, Gift } from 'lucide-react';
 import { Pages } from '../types/types';
 
 interface BottomNavigationProps {
@@ -11,10 +11,11 @@ const BottomNavigation: React.FC<BottomNavigationProps> = ({ currentPage, setCur
     const [isVisible, setIsVisible] = useState(true);
 
     const navItems = [
-        { id: 'transaction', label: '입출금', icon: CreditCard },
-        { id: 'analysis', label: '분석', icon: Activity },
+        { id: 'transaction', label: '입출금', icon: ArrowRightLeft },
+        { id: 'analysis', label: '지출', icon: CreditCard },
         { id: 'home', label: '홈', icon: Home },
-        { id: 'list', label: '목록', icon: List },
+        // { id: 'list', label: '목록', icon: List },
+        { id: 'gift', label: '금융', icon: Gift },
         { id: 'profile', label: '마이', icon: User }
     ];
 

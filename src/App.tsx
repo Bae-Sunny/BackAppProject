@@ -3,7 +3,8 @@ import Header from './components/Header';
 import BottomNavigation from './components/BottomNavigation';
 import HomePage from './components/HomePage';
 import AnalysisPage from './components/AnalysisPage';
-import ListPage from './components/ListPage';
+// import ListPage from './components/ListPage';
+import GiftPage from './components/GiftPage';
 import ProfilePage from './components/ProfilePage';
 import TransactionPage from './components/TransactionPage';
 import { Pages } from './types/types';
@@ -19,7 +20,8 @@ const App = () => {
     const pages = {
         home: <HomePage />,
         analysis: <AnalysisPage />,
-        list: <ListPage />,
+        // list: <ListPage />,
+        gift: <GiftPage />,
         profile: <ProfilePage />,
         transaction: <TransactionPage />,
     };

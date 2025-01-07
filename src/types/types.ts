@@ -1,1 +1,1 @@
-export type Pages = 'home' | 'transaction' | 'analysis' | 'list' | 'profile';
+export type Pages = 'home' | 'transaction' | 'analysis' | 'profile' | 'gift'; 
