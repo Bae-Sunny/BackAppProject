@@ -40,13 +40,24 @@ const ExpenseModal: React.FC<ExpenseModalProps> = ({ isOpen, onClose, onSave, da
     return (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
             <div className="bg-white p-6 rounded-lg">
-                <h3 className="text-lg font-bold mb-4">{date.toLocaleDateString()} 지출 입력</h3>
+                <h3 className="text-lg font-bold mb-4">
+                    {date.toLocaleDateString('ko-KR', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    })} 지출 입력
+                </h3>
+
                 <input
-                    type="number"
-                    value={amount}
-                    onChange={(e) => setAmount(e.target.value)}
-                    placeholder="금액"
-                    className="w-full p-2 mb-4 border rounded"
+                    type="text"
+                    inputMode="numeric"
+                    value={amount ? new Intl.NumberFormat('ko-KR').format(Number(amount)) : ''}
+                    onChange={(e) => {
+                        const rawValue = e.target.value.replace(/[^\d]/g, '');
+                        setAmount(rawValue);
+                    }}
+                    placeholder="금액을 입력하세요"
+                    className="w-full p-2 mb-4 border rounded text-right"
                 />
                 <select
                     value={category}
