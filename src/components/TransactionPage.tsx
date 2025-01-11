@@ -42,6 +42,7 @@ interface TransferModalProps {
     setSelectedFromAccount: (account: Account | null) => void;
     setSelectedToAccount: (contact: Contact | null) => void;
     onTransfer: (amount: number) => void;
+    onAddContact: (contact: Omit<Contact, 'id'>) => void;
 }
 
 // 계좌 관리 모달 props 인터페이스
@@ -80,9 +81,18 @@ const TransferModal: React.FC<TransferModalProps> = ({
     selectedToAccount,
     setSelectedFromAccount,
     setSelectedToAccount,
-    onTransfer
+    onTransfer,
+    onAddContact
 }) => {
     const [amount, setAmount] = useState<string>('');
+    const [isAddingNewContact, setIsAddingNewContact] = useState(false);
+    const [newContact, setNewContact] = useState({
+        name: '',
+        phoneNumber: '',
+        bankName: '',
+        accountNumber: '',
+        isFavorite: false
+    });
 
     if (!isOpen) return null;
 
@@ -151,6 +161,13 @@ const TransferModal: React.FC<TransferModalProps> = ({
                                     </div>
                                 </button>
                             ))}
+                            <button
+                                onClick={() => setIsAddingNewContact(true)}
+                                className="p-3 border-2 border-dashed border-gray-300 rounded-lg text-center hover:bg-gray-50"
+                            >
+                                <Plus className="w-6 h-6 text-gray-400 mx-auto mb-2" />
+                                <p className="text-sm text-gray-600">추가</p>
+                            </button>
                         </div>
                     </div>
 
@@ -201,6 +218,74 @@ const TransferModal: React.FC<TransferModalProps> = ({
                     </div>
                 </div>
             </div>
+
+            {/* 새 연락처 추가 모달 */}
+            {isAddingNewContact && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                    <div className="bg-white rounded-lg p-6 w-full max-w-md">
+                        <div className="flex justify-between items-center mb-4">
+                            <h3 className="text-lg font-bold">새 연락처 추가</h3>
+                            <button onClick={() => setIsAddingNewContact(false)}>
+                                <X className="w-5 h-5" />
+                            </button>
+                        </div>
+                        <div className="space-y-4">
+                            <input
+                                placeholder="이름"
+                                value={newContact.name}
+                                onChange={(e) => setNewContact(prev => ({ ...prev, name: e.target.value }))}
+                                className="w-full p-2 border rounded"
+                            />
+                            <input
+                                placeholder="전화번호"
+                                value={newContact.phoneNumber}
+                                onChange={(e) => setNewContact(prev => ({ ...prev, phoneNumber: e.target.value }))}
+                                className="w-full p-2 border rounded"
+                            />
+                            <input
+                                placeholder="은행명"
+                                value={newContact.bankName}
+                                onChange={(e) => setNewContact(prev => ({ ...prev, bankName: e.target.value }))}
+                                className="w-full p-2 border rounded"
+                            />
+                            <input
+                                placeholder="계좌번호"
+                                value={newContact.accountNumber}
+                                onChange={(e) => setNewContact(prev => ({ ...prev, accountNumber: e.target.value }))}
+                                className="w-full p-2 border rounded"
+                            />
+                            <div className="flex justify-end space-x-2">
+                                <button
+                                    onClick={() => setIsAddingNewContact(false)}
+                                    className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"
+                                >
+                                    취소
+                                </button>
+                                <button
+                                    onClick={() => {
+                                        if (!newContact.name || !newContact.phoneNumber) {
+                                            alert('이름과 전화번호는 필수입니다.');
+                                            return;
+                                        }
+                                        onAddContact(newContact);
+                                        setIsAddingNewContact(false);
+                                        setNewContact({
+                                            name: '',
+                                            phoneNumber: '',
+                                            bankName: '',
+                                            accountNumber: '',
+                                            isFavorite: false
+                                        });
+                                    }}
+                                    className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                                >
+                                    추가
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
@@ -645,7 +730,7 @@ const TransactionPage = () => {
     const [contacts, setContacts] = useState<Contact[]>([
         {
             id: 1,
-            name: '김철수',
+            name: '김땡땡',
             phoneNumber: '010-1234-5678',
             bankName: '카카오뱅크',
             accountNumber: '3333-01-1234567',
@@ -653,7 +738,7 @@ const TransactionPage = () => {
         },
         {
             id: 2,
-            name: '이영희',
+            name: '이땡땡',
             phoneNumber: '010-8765-4321',
             bankName: '국민은행',
             accountNumber: '123-45-9876',
@@ -666,7 +751,7 @@ const TransactionPage = () => {
         {
             id: 1,
             sender: '국민은행 123-45-6789',
-            recipient: '김철수 카카오뱅크 3333-01-1234567',
+            recipient: '김땡땡 카카오뱅크 3333-01-1234567',
             amount: 50000,
             date: '2024-01-07 14:30',
             status: 'completed'
@@ -917,6 +1002,7 @@ const TransactionPage = () => {
                 setSelectedFromAccount={setSelectedFromAccount}
                 setSelectedToAccount={setSelectedToAccount}
                 onTransfer={handleTransfer}
+                onAddContact={handleAddContact}
             />
 
             <AccountsModal
