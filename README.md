@@ -83,3 +83,29 @@ https://github.com/user-attachments/assets/be4f4f6f-7b71-4dc7-b577-31e117a41707
     </tr>
   </table>
 </div>
+
+---
+
+## App Sketch (2025.01.08) 
+### 3차 수정 (입출금 페이지 구체화 - 모달 추가)
+https://github.com/user-attachments/assets/8ba0610a-d68e-489f-af47-c9490d4f8a2a
+<div align="center">
+  <table>
+    <tr>
+      <td><img width="300" alt="Sketch 1" src="https://github.com/user-attachments/assets/71b27530-1da1-428e-9a96-44b466f07ecf" /></td>
+      <td><img width="300" alt="Sketch 2" src="https://github.com/user-attachments/assets/d6db2926-8ba9-4c29-84c1-23930e677bcf" /></td>
+      <td><img width="300" alt="Sketch 3" src="https://github.com/user-attachments/assets/5002a34c-ac89-49df-9047-2ff3aeb8bd5e" /></td>
+      <td><img width="300" alt="Sketch 4" src="https://github.com/user-attachments/assets/a1400c08-90a6-4fc3-bcd5-efc1f6b49773" /></td>
+    </tr>
+    <tr>
+      <td><img width="300" alt="Sketch 1" src="https://github.com/user-attachments/assets/e167fc3a-38fd-4d3b-87c3-1b63a5406b6b"  /></td>
+      <td><img width="300" alt="Sketch 2" src="https://github.com/user-attachments/assets/a0ec21bc-91a4-4f23-9aab-1771d8acf360" /></td>
+      <td><img width="300" alt="Sketch 3" src="https://github.com/user-attachments/assets/216885aa-8a52-405d-8e6f-53e0a013b2be" /></td>
+      <td><img width="300" alt="Sketch 4" src="https://github.com/user-attachments/assets/fbc0188a-f9fb-4656-8bfd-f0ea1c98b609" /></td>
+    </tr>
+    <tr>
+      <td><img width="300" alt="Sketch 1" src="https://github.com/user-attachments/assets/649aec5b-605f-4594-8135-0eb1f4ebbbfd" /></td>
+      <td><img width="300" alt="Sketch 2" src="https://github.com/user-attachments/assets/015ea39b-3f80-4bfe-b60b-dabcd8e9a221" /></td>
+    </tr>
+  </table>
+</div>
